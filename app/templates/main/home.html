@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block container %}
+<div class="container-fluid d-flex flex-wrap justify-content-start  pt-5 pb-5">
+
+{% for url in urls %}
+<div class="img-container col-xl-4 my-4">
+    <img src="{{url}}" alt="" class="responsive img-thumbnail">
+</div>
+{% endfor %}
+</div>
+
+   
+
+{% endblock %}

@@ -8,25 +8,15 @@ main = Blueprint("main", __name__)
 @main.route('/')
 @main.route('/home')
 def home():
-    return render_template("home.html", title="Home")
+    return render_template("main/home.html", title="Home")
 
 
-@main.route('/about-us')
+@main.route('/about')
 def about():
-    return render_template('about.html',title="About Us")
+    return render_template('main/about.html',title="About")
 
 
-@main.route('/gallery')
-def gallery():
-    tattoos = Tattoo.query.all()
-    urls = []
-    for tattoo in tattoos:
-        url = url_for('static', filename="images/"+tattoo.image)
-        urls.append(url)
-    return render_template('gallery.html', title="Gallery", urls=urls)
-
-
-@main.route('/contact-us', methods=['GET', 'POST'])
+@main.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
@@ -35,6 +25,6 @@ def contact():
         db.session.commit()
         flash('Your request has been successfully submitted', 'success')
         return redirect(url_for('main.home'))
-    return render_template('contact.html', title="Contact Us", form=form)
+    return render_template('main/contact.html', title="Contact", form=form)
 
 

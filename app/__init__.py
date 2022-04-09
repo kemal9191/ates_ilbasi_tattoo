@@ -14,8 +14,8 @@ def create_app(config_class=Config):
     db.init_app(app)
 
     from app.main.routes import main
-    from app.admins.routes import admins
-    from app.errors.handlers import errors
+    from app.admin.routes import admins
+    from app.error.handlers import errors
 
     app.register_blueprint(main)
     app.register_blueprint(admins)

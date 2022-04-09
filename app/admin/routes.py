@@ -2,8 +2,8 @@ from crypt import methods
 from flask import redirect, url_for, render_template,request, flash, Blueprint
 from app import db
 from app.models import Tattoo, Post
-from app.admins.forms import PostForm, TattooForm
-from app.admins.utils import save_picture
+from app.admin.forms import PostForm, TattooForm
+from app.admin.utils import save_picture
 
 admins = Blueprint("admins", __name__)
 
