@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+
+header{
+    
+}
+
+.home-bg{
+    background-image: url("/static/images/layout.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+}
+
+.nav-link{
+    transition: opacity 0.2s ease-in-out;
+    cursor: default;
+}
+
+.nav-link:not(.disabled):hover{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+
+.border{
+border-radius: 10px;
+padding: 1rem 5rem;
+}
+
+.book-button-container{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+}
+
+.img-container{
+    height: 500px;
+  }
+  
+.responsive{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#flashed_messages{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    z-index: 160;
+
+}
+.navbar{
+    height:10vh;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
