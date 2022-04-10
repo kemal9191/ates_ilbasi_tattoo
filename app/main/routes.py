@@ -20,10 +20,10 @@ def about():
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        new_request = FormRequests(title=form.title.data, content=form.content.data)
+        new_request = FormRequests(title=form.subject.data, content=form.message.data)
         db.session.add(new_request)
         db.session.commit()
-        flash('Your request has been successfully submitted', 'success')
+        flash('Mesajınız başarıyla iletildi!', 'success')
         return redirect(url_for('main.home'))
     return render_template('main/contact.html', title="Contact", form=form)
 

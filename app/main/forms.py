@@ -3,9 +3,9 @@ from flask_wtf import FlaskForm
 from wtforms.validators import InputRequired, DataRequired, Email
 
 class ContactForm(FlaskForm):
-    name = StringField('Name*', validators=[DataRequired()])
-    email = StringField('Email*', validators=[DataRequired(), Email()])
-    subject = StringField('Subject*', validators=[DataRequired()])
-    message = TextAreaField('Message*', validators=[DataRequired()])
+    name = StringField('İsim Soyisim*', validators=[DataRequired()])
+    email = StringField('E-mail Adresi*', validators=[DataRequired(), Email()])
+    subject = StringField('Konu*', validators=[DataRequired()])
+    message = TextAreaField('Mesajınız*', validators=[DataRequired()])
     submit = SubmitField('GÖNDER')
 

@@ -1,19 +1,8 @@
 *,
 *::before,
 *::after{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-}
-
-header{
-    
-}
-
-.home-bg{
-    background-image: url("/static/images/layout.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .navbar-right{
@@ -23,54 +12,60 @@ header{
     width:100%;
 }
 
-.nav-link{
-    transition: opacity 0.2s ease-in-out;
+a{
     cursor: default;
+    
 }
 
-.nav-link:not(.disabled):hover{
-    opacity: 0.3;
+a:hover{
+    text-decoration: none;
+    opacity: 1 !important;
+}
+
+a:not(.disabled):hover{
     cursor: pointer;
 }
 
 
-.border{
-border-radius: 10px;
-padding: 1rem 5rem;
-}
 
-.book-button-container{
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    position: relative;
-}
-
-.img-container{
-    height: 500px;
-  }
-  
-.responsive{
-    width:  100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-#flashed_messages{
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    z-index: 160;
-
-}
 .navbar{
     height:10vh;
 }
+
 footer{
     position: fixed;
     bottom: 0;
     width:100%;
+}
+
+.footer-logo{
+    opacity: 0.5;
+    transition: opacity 0.5s ease-out;
+}
+
+.footer-logo:hover{
+    opacity: 0.7;
+}
+
+.img-container{
+    height: 400px;
+  }
+
+.responsive{
+width:  100%;
+height: 100%;
+object-fit: cover;
+}
+
+img{
+    filter:grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+img:hover{
+    filter: grayscale(0);
+}
+
+.colored{
+    filter: grayscale(0);
 }
