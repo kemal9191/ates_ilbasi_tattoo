@@ -1,0 +1,44 @@
+{% extends 'admin/base.html' %}
+{% block container %}
+<div class="">
+  <div class="d-flex flex-wrap my-5 justify-content-center align-items-start col-10 mx-auto">
+    {% for req in requests %}
+    <div class="m-3 p-3 mt-lg-0 col-md-8 col-lg-4 rounded shadow-border">
+      <h4 class="fw-bold uppercase">{{req.name_surname|upper}}</h4>
+      <h6 class="text-secondary">
+        {{req.subject}}
+      </h6>
+      <p class="article-list">{{req.message|safe|truncate(length=30, killwords=False, end="...")}}</p>
+      <span class="text-muted">{{req.date.strftime('%Y-%m-%d')}}</span>
+      <div class="col-12 mt-4 ml-0">
+        <a class="btn btn-secondary font-weight-bold ml-0" data-id="{{req.id}}"
+          href="{{url_for('admin.request_details', id=req.id)}}">DETAYLAR</a>
+        <a type="button" class="btn btn-danger font-weight-bold" data-id="{{req.id}}" data-toggle="modal"
+          data-target="#confirmationModal-{{req.id}}">SİL</a>
+
+        <!--Modal Starts-->
+        <div class="modal fade" id="confirmationModal-{{req.id}}" tabindex="-1"
+          aria-labelledby="confirmationModalLabel">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Sil</h5>
+                <a type="button" class="font-weight-bold" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                Emin misiniz?
+              </div>
+              <div class="modal-footer">
+                <a type="button" class="btn btn-secondary" data-dismiss="modal">GERİ</a>
+                <a type="button" class="btn btn-danger" href="{{url_for('admin.delete_request', id=req.id)}}">SİL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal Ends-->
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

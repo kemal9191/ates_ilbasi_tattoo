@@ -59,13 +59,104 @@ object-fit: cover;
 
 img{
     filter:grayscale(100%);
+    -webkit-filter:grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
     transition: filter 0.5s ease-in-out;
 }
 
 img:hover{
     filter: grayscale(0);
+    -webkit-filter:grayscale(0);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
 }
 
 .colored{
     filter: grayscale(0);
+    -webkit-filter:grayscale(0);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
 }
+
+.shadow-border{
+    border: 2px solid rgb(142,142,142, 0.4);
+    box-shadow: 3px 6px 11px #888888;
+}
+
+
+
+@media (min-height:480px)  { 
+    #gif-container{
+        height:300px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;    
+    } 
+}
+@media (min-height:580px)  { 
+    #gif-container{
+        height:450px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;    
+    } 
+}
+@media (min-height:680px)  { 
+    #gif-container{
+        height:600px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin:auto
+    } 
+}
+
+@media (min-height:780px)  { 
+    #gif-container{
+        height:700px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin:auto
+    } 
+}
+
+@media (min-height:880px)  { 
+    #gif-container{
+        height:750px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin:auto
+    } 
+}
+
+@media (min-width:880px)  { 
+    #gif-container{
+        height:750px;
+        position: relative;
+    }  
+    #gif-container img{
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin:auto
+    } 
+}
+
+

@@ -1,42 +1,8 @@
 {% extends 'main/base.html' %}
-
 {% block container %}
-<div class="mb-5 pb-5">
-    <div class="container-fluid d-flex flex-wrap justify-sm-content-center pb-5  mb-5">
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-1.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-2.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-3.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-4.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-5.jpg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-6.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-7.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-8.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-10.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-        <div class="img-container col-sm-8 col-md-6 col-lg-4 col-xl-3 my-4">
-            <img src="{{url_for('static', filename='images/img-11.jpeg')}}" alt="" class="img-thumbnail responsive">
-        </div>
-    </div>
+<div class="c-12" id="gif-container">
+    <img src="{{url_for('static', filename='images/home.gif')}}" alt="" class="img-thumbnail">
 </div>
-
-
 
 
 {% endblock %}

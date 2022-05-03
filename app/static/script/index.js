@@ -4,7 +4,7 @@ function getPositionY( element ) {
     
 }
 
-window.addEventListener("scroll", function(){
+const coloringImage = function(){
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
 
@@ -13,7 +13,7 @@ window.addEventListener("scroll", function(){
     let y = getPositionY(images[2]);
 
     console.log(y);
-    if(windowWidth<500 && windowHeight<600){
+    if(windowWidth<550 && windowHeight<700){
         images.each(function(index){
             let y = getPositionY(images[index]);
             if(-100<y && y<300){
@@ -23,4 +23,21 @@ window.addEventListener("scroll", function(){
             }   
         })        
     }
-})
+}
+window.addEventListener("scroll", coloringImage);
+
+document.addEventListener("DOMContentLoaded", coloringImage);
+
+
+$("#images").change(function() {
+    var els = "";
+
+    for(let i = 0; i<this.files.length; i++){
+        els += "<p class='text-primary'>"+this.files[i].name+"</p>";
+        console.log(this.files[i].name)
+    }
+    $("#file-container").html(" ")
+    $("#file-container").append(els);
+
+    
+});

@@ -1,0 +1,36 @@
+{% extends 'admin/base.html' %}
+{% block container %}
+    <div class="container mt-5 p-5 pt-0 d-flex justify-content-start flex-column">
+        <form class="row mb-5 d-flex flex-column w-100 align-items-center" enctype="multipart/form-data" method="POST" action="">
+            {{form.hidden_tag()}}
+            <div class="col-md-8 mb-3">
+                {{form.name.label(class="form-label font-weight-bold")}}
+                {{form.name(class="form-control", placeholder="İçeriğin başlığını giriniz.")}}
+            </div>
+            <div class="col-md-8 mb-3">
+                {{form.description.label(class="form-label font-weight-bold")}}
+                {{form.description(class="form-control", placeholder="Açıklama giriniz.", id="description")}}
+            </div>
+            <div class="col-md-8 mb-3">
+                {{form.seo_statement.label(class="form-label font-weight-bold")}}
+                {{form.seo_statement(class="form-control", placeholder="Girdiyi tanımlayan bir cümle giriniz.")}}
+            </div>
+            <div class="col-md-8 mb-3">
+                {{form.seo_keywords.label(class="form-label font-weight-bold")}}
+                {{form.seo_keywords(class="form-control", placeholder="Girdiyi tanımlayan anahtar kelimeler giriniz. (max. 4)")}}
+            </div>
+            <div class="col-sm-8 mb-3">
+                <div class="col-md-12">
+                    <label class="custom-file-label" for="inputGroupFile01"></label>
+                    {{form.image(class="custom-file-input", id="inputGroupFile01")}}
+                </div>
+            </div>
+        
+            <div class="col-12 text-center">
+                {{form.submit(class="btn btn-primary font-weight-bold")}}
+            </div>
+    </form>
+    {{ckeditor.load()}}
+    {{ckeditor.config(name='description')}}
+    </div>
+{% endblock %}    
